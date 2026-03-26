@@ -22,7 +22,10 @@ No fluff. No "be concise and helpful." These are battle-tested instructions born
 
 | Prompt | What It Solves |
 |--------|---------------|
+| [Ask Before Deleting Code](prompts/ask-before-deleting-code.md) | AI silently removing code it thinks is "unused" or "unnecessary" |
+| [Confirm Before Running Destructive Commands](prompts/confirm-before-running-destructive-commands.md) | AI running `rm -rf`, `git push --force`, or database drops without asking |
 | [Never Skip Instructions](prompts/never-skip-instructions.md) | AI silently skipping your rules to "be helpful" |
+| [Read Before Edit](prompts/read-before-edit.md) | AI making blind edits based on assumptions instead of reading the actual file |
 
 ## Philosophy
 
