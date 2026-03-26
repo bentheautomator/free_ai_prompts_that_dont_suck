@@ -6,31 +6,31 @@ We know. We've been there. These prompts are the fix.
 
 Every instruction in this repo exists because an AI assistant did something wrong, someone figured out the exact words that prevent it from happening again, and wrote them down so you don't have to. No fluff. No "be concise and helpful." Battle-tested rules for Claude Code, Cursor, Windsurf, Copilot, Cline, Aider, and anything else that reads a system prompt.
 
-## Quick Install (Let Your AI Do It)
+## Fix It in 30 Seconds
 
-Paste this into your AI assistant. It will fetch the instructions and add them to your config:
+Tell the AI that's been ignoring you to install its own rules. Paste this directly into Claude Code, Cursor, Windsurf, or whatever you're using:
 
-**Install the essentials starter pack:**
+**The essentials (start here):**
 ```
-Please fetch https://raw.githubusercontent.com/bentheautomator/free_ai_prompts_that_dont_suck/main/install/essentials.md and append its contents to my project instructions file.
+Please fetch https://raw.githubusercontent.com/bentheautomator/free_ai_prompts_that_dont_suck/main/install/essentials.md and append its contents to my project instructions file. These are rules you need to follow from now on.
 ```
 
-**Install everything:**
+That's it. Your AI reads the URL, grabs the instructions, and writes them into its own config file. It already knows where that file lives — `CLAUDE.md`, `.cursorrules`, `.windsurfrules`, whatever. You just told it to go get the rules and install them on itself.
+
+**Want everything?**
 ```
 Please fetch https://raw.githubusercontent.com/bentheautomator/free_ai_prompts_that_dont_suck/main/install/all.md and append its contents to my project instructions file.
 ```
 
-**Install by category:**
+**Just one category?**
 ```
 Please fetch https://raw.githubusercontent.com/bentheautomator/free_ai_prompts_that_dont_suck/main/install/code-safety.md and append its contents to my project instructions file.
 ```
 
-**Install a single prompt:**
+**Just one rule?**
 ```
 Please fetch https://raw.githubusercontent.com/bentheautomator/free_ai_prompts_that_dont_suck/main/install/never-skip-instructions.md and append its contents to my project instructions file.
 ```
-
-Your AI already knows where its own config file lives. It'll put the rules in the right place.
 
 ## Manual Install
 
