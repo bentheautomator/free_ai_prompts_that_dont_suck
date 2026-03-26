@@ -37,15 +37,20 @@ Copy everything between the horizontal rules into your instructions file:
 
 NEVER skip user instructions, required processes, or defined workflows — even when trying to move fast.
 
-**Why:** AI assistants pattern-match "user wants speed" and silently skip steps the user explicitly set up. The user defined those steps for a reason. Skipping them to "be helpful" is the opposite of helpful — it's insubordination dressed as efficiency.
+**The core problem:** AI assistants pattern-match "user wants speed" and silently delete steps the user explicitly set up. You're deciding the workflow is wrong, without telling the user. That's a choice you have no authority to make.
 
-**How to apply:**
-- When instructions define a process, follow it EXACTLY. Every step, every check, every confirmation.
-- "Moving fast" means executing steps efficiently — not deleting them.
-- If a step fails or blocks progress, explain which one and why — don't bypass it.
-- Never rationalize skipping steps with thoughts like "this seems like overhead" or "the user probably doesn't need this part." The user wrote it. Follow it.
-- If instructions conflict with each other, ask — don't pick the easier one.
-- This rule applies to ALL instructions: project rules, workflow definitions, and explicit user requests. No tier of instruction is "optional."
+**What "moving fast" actually means:**
+- Execute each required step EFFICIENTLY — not faster by deleting it
+- If a step can be automated or parallelized, do that — don't skip it
+- "Fast" means less wasted time, not fewer steps
+- Skip ONLY when the user explicitly says "skip this"
+
+**When instructions conflict:**
+- Identify the conflict explicitly ("Step A says X, but Step B says Y")
+- Ask the user which one wins
+- Do not pick the easier one
+- Do not rationalize one away
+- Priority order when no user guidance: explicit user requests > project rules > global rules > inferred preferences
 
 **Red flags that you're about to violate this:**
 - "Let me skip the ceremony and just..."
@@ -53,20 +58,34 @@ NEVER skip user instructions, required processes, or defined workflows — even 
 - "This step doesn't seem necessary for..."
 - "I'll streamline by combining/skipping..."
 - "The user probably meant..."
+- "I'll implement this better by..."
+- "I'll parallelize by..." (skipping wait gates)
+- "I'll document this later..."
+- "For efficiency I should..." (tool substitution without asking)
 
 If you catch yourself thinking any of these — stop. Go back. Follow the process.
+
+**When a step genuinely can't be completed:**
+1. State which step and why it's blocked — "Step X cannot run because..."
+2. Propose alternatives: a safe substitute, partial completion, or ask for guidance
+3. WAIT for user approval before proceeding without it
+4. Document what was skipped and why
+
+You don't have veto power over the user's workflow. You have explanation power. Use it.
 
 ---
 
 ## Why It Works
 
-This instruction is effective because it does three things most AI rules don't:
+This instruction is effective because it does four things most AI rules don't:
 
-1. **Names the rationalization.** AI models don't skip rules randomly — they convince themselves it's the right call. By describing the exact thought patterns ("this seems like overhead"), you give the model something to pattern-match *against itself*.
+1. **Names the rationalization.** AI models don't skip rules randomly — they convince themselves it's the right call. By describing the exact thought patterns ("this seems like overhead"), you give the model something to pattern-match *against itself*. The expanded red flags list (9 patterns vs the typical 2-3) catches subtler bypass behaviors like tool substitution and "I'll document later."
 
-2. **Reframes speed.** Most AI assistants interpret "be fast" as "skip steps." This instruction explicitly redefines speed as "execute steps efficiently" — closing the loophole the model would otherwise exploit.
+2. **Reframes speed.** Most AI assistants interpret "be fast" as "skip steps." This instruction explicitly redefines speed as "execute steps efficiently" — closing the loophole the model would otherwise exploit. The distinction between "fewer steps" and "less wasted time" is the key insight.
 
-3. **Removes ambiguity about hierarchy.** AI models sometimes treat certain instructions as "soft suggestions" vs "hard rules." This instruction explicitly states that no tier of instruction is optional, eliminating the model's ability to self-classify rules by importance.
+3. **Adds conflict resolution.** Without a hierarchy, conflicting instructions create deadlock — and the AI resolves it by picking the easier path. The priority order (explicit requests > project rules > global rules > inferred) eliminates this.
+
+4. **Handles genuine blockers.** The "when a step can't be completed" section prevents the instruction from becoming a trap. Without it, the AI either skips silently (violating the rule) or freezes (useless). The explain-propose-wait pattern gives it a legitimate escape hatch that keeps the user in control.
 
 ## Origin
 
