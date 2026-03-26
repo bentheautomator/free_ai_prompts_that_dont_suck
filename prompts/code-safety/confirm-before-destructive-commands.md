@@ -1,3 +1,13 @@
+---
+title: Confirm Before Running Destructive Commands
+slug: confirm-before-destructive-commands
+category: code-safety
+tags: [universal, foundational, essential]
+works_with: all
+severity: critical
+one_liner: "AI running rm -rf, force-push, or DB drops without asking"
+---
+
 # Confirm Before Running Destructive Commands
 
 > **Works with:** All AI coding assistants (Claude Code, Cursor, Windsurf, Copilot, Cline, Aider)

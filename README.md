@@ -8,9 +8,19 @@ No fluff. No "be concise and helpful." These are battle-tested instructions born
 
 Paste this into your AI assistant. It will fetch the instructions and add them to your config:
 
-**Install all prompts at once:**
+**Install the essentials starter pack:**
+```
+Please fetch https://raw.githubusercontent.com/bentheautomator/free_ai_prompts_that_dont_suck/main/install/essentials.md and append its contents to my project instructions file.
+```
+
+**Install everything:**
 ```
 Please fetch https://raw.githubusercontent.com/bentheautomator/free_ai_prompts_that_dont_suck/main/install/all.md and append its contents to my project instructions file.
+```
+
+**Install by category:**
+```
+Please fetch https://raw.githubusercontent.com/bentheautomator/free_ai_prompts_that_dont_suck/main/install/code-safety.md and append its contents to my project instructions file.
 ```
 
 **Install a single prompt:**
@@ -18,18 +28,11 @@ Please fetch https://raw.githubusercontent.com/bentheautomator/free_ai_prompts_t
 Please fetch https://raw.githubusercontent.com/bentheautomator/free_ai_prompts_that_dont_suck/main/install/never-skip-instructions.md and append its contents to my project instructions file.
 ```
 
-Available individual installs:
-- `install/never-skip-instructions.md`
-- `install/ask-before-deleting-code.md`
-- `install/read-before-edit.md`
-- `install/confirm-before-running-destructive-commands.md`
-- `install/all.md` (everything)
-
 Your AI already knows where its own config file lives. It'll put the rules in the right place.
 
 ## Manual Install
 
-If you prefer to copy-paste yourself:
+If you prefer to copy-paste yourself, each file in `prompts/` has the full explanation with a clearly marked instruction block between horizontal rules. Each file in `install/` has just the instruction — ready to paste.
 
 **Claude Code:** Copy into your `CLAUDE.md` (project-level) or `~/.claude/CLAUDE.md` (global).
 
@@ -41,18 +44,33 @@ If you prefer to copy-paste yourself:
 
 **Cline / Aider / Others:** Copy into whatever file your AI assistant reads for system instructions.
 
-Each file in `prompts/` has the full explanation. Each file in `install/` has just the instruction block — ready to paste.
-
 **Placement matters.** Put important rules near the top. AI models weight instructions at the beginning of their context more heavily than those buried at the bottom.
 
 ## The Prompts
 
+<!-- PROMPT_TABLE_START -->
+
+### Code Quality
+
 | Prompt | What It Solves |
 |--------|---------------|
-| [Ask Before Deleting Code](prompts/ask-before-deleting-code.md) | AI silently removing code it thinks is "unused" or "unnecessary" |
-| [Confirm Before Running Destructive Commands](prompts/confirm-before-running-destructive-commands.md) | AI running `rm -rf`, `git push --force`, or database drops without asking |
-| [Never Skip Instructions](prompts/never-skip-instructions.md) | AI silently skipping your rules to "be helpful" |
-| [Read Before Edit](prompts/read-before-edit.md) | AI making blind edits based on assumptions instead of reading the actual file |
+| [Read Before Edit](prompts/code-quality/read-before-edit.md) | AI making blind edits based on assumptions instead of reading the file |
+
+
+### Code Safety
+
+| Prompt | What It Solves |
+|--------|---------------|
+| [Ask Before Deleting Code](prompts/code-safety/ask-before-deleting-code.md) | AI silently removing code it thinks is unused |
+| [Confirm Before Running Destructive Commands](prompts/code-safety/confirm-before-destructive-commands.md) | AI running rm -rf, force-push, or DB drops without asking |
+
+
+### Instruction Following
+
+| Prompt | What It Solves |
+|--------|---------------|
+| [Never Skip Instructions](prompts/instruction-following/never-skip-instructions.md) | AI silently skipping your rules to be helpful |
+<!-- PROMPT_TABLE_END -->
 
 ## Philosophy
 
@@ -68,11 +86,14 @@ Good AI instructions share three traits:
 
 Got a prompt that solved a real problem? Open a PR. Include:
 
-- **The instruction itself** (copy-paste ready)
+- **The instruction itself** (copy-paste ready, between `---` markers)
 - **What failure mode it prevents** (what went wrong)
 - **Why it works** (what makes it effective)
+- **YAML frontmatter** with title, slug, category, tags, works_with, severity, one_liner
 
-Skip prompts that are just vibes. If it doesn't solve a specific, observable failure mode, it doesn't belong here.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full template and guidelines.
+
+After adding your prompt, run `make build` to regenerate the install files and README table.
 
 ## License
 

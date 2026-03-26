@@ -1,3 +1,13 @@
+---
+title: Never Skip Instructions
+slug: never-skip-instructions
+category: instruction-following
+tags: [universal, foundational, essential]
+works_with: all
+severity: critical
+one_liner: "AI silently skipping your rules to be helpful"
+---
+
 # Never Skip Instructions
 
 > **Works with:** All AI coding assistants (Claude Code, Cursor, Windsurf, Copilot, Cline, Aider)
@@ -17,7 +27,7 @@ This is the most destructive behavior an AI assistant can exhibit because:
 
 ## The Instruction
 
-Copy everything between the horizontal rules into your `CLAUDE.md`, `.cursorrules`, or system prompt:
+Copy everything between the horizontal rules into your instructions file:
 
 ---
 

@@ -1,3 +1,13 @@
+---
+title: Ask Before Deleting Code
+slug: ask-before-deleting-code
+category: code-safety
+tags: [universal, foundational, essential]
+works_with: all
+severity: critical
+one_liner: "AI silently removing code it thinks is unused"
+---
+
 # Ask Before Deleting Code
 
 > **Works with:** All AI coding assistants (Claude Code, Cursor, Windsurf, Copilot, Cline, Aider)

@@ -1,3 +1,13 @@
+---
+title: Read Before Edit
+slug: read-before-edit
+category: code-quality
+tags: [universal, foundational, essential]
+works_with: all
+severity: critical
+one_liner: "AI making blind edits based on assumptions instead of reading the file"
+---
+
 # Read Before Edit
 
 > **Works with:** All AI coding assistants (Claude Code, Cursor, Windsurf, Copilot, Cline, Aider)

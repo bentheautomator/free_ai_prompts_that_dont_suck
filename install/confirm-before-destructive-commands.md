@@ -1,4 +1,5 @@
-## Confirm Before Running Destructive Commands
+
+### Confirm Before Running Destructive Commands
 
 NEVER run destructive or irreversible commands without stating what you're about to do and getting explicit approval.
 
