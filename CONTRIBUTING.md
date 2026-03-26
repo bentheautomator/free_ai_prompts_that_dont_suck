@@ -39,6 +39,8 @@ one_liner: "Short description of what it prevents"
 
 > One-line description of what it prevents.
 
+**[Copy-paste ready version](../../install/your-prompt-title.md)** — just the instruction block, no explanation.
+
 ## The Problem
 
 What goes wrong without this instruction. Be specific — name the failure mode,

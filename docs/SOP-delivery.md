@@ -92,6 +92,7 @@ one_liner: "What it prevents in <80 chars"
 - [ ] `one_liner` under 80 characters
 - [ ] Instruction block is between two `---` markers
 - [ ] Instruction block is fully standalone (no "as mentioned above")
+- [ ] Install link present: `**[Copy-paste ready version](../../install/<slug>.md)**` after description blockquote
 - [ ] At least one red flag pattern listed (thought patterns that precede the failure)
 - [ ] Problem section names a specific, real behavior — not a vague concern
 - [ ] Why It Works names a mechanism — not just "it helps"

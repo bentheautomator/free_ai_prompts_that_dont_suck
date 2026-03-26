@@ -14,6 +14,8 @@ one_liner: "AI making blind edits based on assumptions instead of reading the fi
 
 > Prevents AI from making blind edits based on assumptions about file contents.
 
+**[Copy-paste ready version](../../install/read-before-edit.md)** — just the instruction block, no explanation.
+
 ## The Problem
 
 You tell the AI to change something in a file. Instead of reading the file first, it generates a plausible-looking edit based on what it *thinks* the file contains. The edit either doesn't match the actual code (causing a failed patch), or worse — it silently overwrites something important because the AI hallucinated the surrounding context.

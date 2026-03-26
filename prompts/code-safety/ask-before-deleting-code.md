@@ -14,6 +14,8 @@ one_liner: "AI silently removing code it thinks is unused"
 
 > Prevents AI from silently removing code it thinks is "unused" or "unnecessary."
 
+**[Copy-paste ready version](../../install/ask-before-deleting-code.md)** — just the instruction block, no explanation.
+
 ## The Problem
 
 You ask the AI to add a feature or fix a bug. Along the way, it notices some code it considers dead, redundant, or outdated. Without saying anything, it deletes it. You don't notice until later — when something breaks, or you realize the "dead" code was actually called dynamically, used in tests, or intentionally kept for a reason the AI couldn't see.

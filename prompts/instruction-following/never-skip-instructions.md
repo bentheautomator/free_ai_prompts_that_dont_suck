@@ -14,6 +14,8 @@ one_liner: "AI silently skipping your rules to be helpful"
 
 > Prevents the single most common AI assistant failure mode: silently skipping your rules to "be helpful."
 
+**[Copy-paste ready version](../../install/never-skip-instructions.md)** — just the instruction block, no explanation.
+
 ## The Problem
 
 You write careful instructions. Your AI assistant reads them, decides some are "overhead," and silently skips them while telling you it's being efficient. You don't find out until something breaks.

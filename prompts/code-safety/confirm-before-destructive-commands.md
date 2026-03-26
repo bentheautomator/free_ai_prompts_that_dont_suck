@@ -14,6 +14,8 @@ one_liner: "AI running rm -rf, force-push, or DB drops without asking"
 
 > Prevents AI from running irreversible shell commands without explicit approval.
 
+**[Copy-paste ready version](../../install/confirm-before-destructive-commands.md)** — just the instruction block, no explanation.
+
 ## The Problem
 
 You ask the AI to "clean up the build artifacts" and it runs `rm -rf` on a directory that also contained uncommitted work. Or you ask it to "reset the database" and it drops tables in production because it picked the wrong connection string. Or it force-pushes to main because it thought that was the fastest way to fix a branch conflict.
