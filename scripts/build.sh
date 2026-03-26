@@ -191,12 +191,12 @@ generate_readme_table() {
             echo "" >> "$table_file"
             echo "### ${display_cat}" >> "$table_file"
             echo "" >> "$table_file"
-            echo "| Prompt | What It Solves |" >> "$table_file"
-            echo "|--------|---------------|" >> "$table_file"
+            echo "| Prompt | What It Solves | Install |" >> "$table_file"
+            echo "|--------|---------------|---------|" >> "$table_file"
             current_category="$category"
         fi
 
-        echo "| [${title}](prompts/${category}/${slug}.md) | ${one_liner} |" >> "$table_file"
+        echo "| [${title}](prompts/${category}/${slug}.md) | ${one_liner} | [install](install/${slug}.md) |" >> "$table_file"
     done < <(collect_prompts)
 
     # Replace content between markers in README using temp file approach

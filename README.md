@@ -52,24 +52,24 @@ If you prefer to copy-paste yourself, each file in `prompts/` has the full expla
 
 ### Code Quality
 
-| Prompt | What It Solves |
-|--------|---------------|
-| [Read Before Edit](prompts/code-quality/read-before-edit.md) | AI making blind edits based on assumptions instead of reading the file |
+| Prompt | What It Solves | Install |
+|--------|---------------|---------|
+| [Read Before Edit](prompts/code-quality/read-before-edit.md) | AI making blind edits based on assumptions instead of reading the file | [install](install/read-before-edit.md) |
 
 
 ### Code Safety
 
-| Prompt | What It Solves |
-|--------|---------------|
-| [Ask Before Deleting Code](prompts/code-safety/ask-before-deleting-code.md) | AI silently removing code it thinks is unused |
-| [Confirm Before Running Destructive Commands](prompts/code-safety/confirm-before-destructive-commands.md) | AI running rm -rf, force-push, or DB drops without asking |
+| Prompt | What It Solves | Install |
+|--------|---------------|---------|
+| [Ask Before Deleting Code](prompts/code-safety/ask-before-deleting-code.md) | AI silently removing code it thinks is unused | [install](install/ask-before-deleting-code.md) |
+| [Confirm Before Running Destructive Commands](prompts/code-safety/confirm-before-destructive-commands.md) | AI running rm -rf, force-push, or DB drops without asking | [install](install/confirm-before-destructive-commands.md) |
 
 
 ### Instruction Following
 
-| Prompt | What It Solves |
-|--------|---------------|
-| [Never Skip Instructions](prompts/instruction-following/never-skip-instructions.md) | AI silently skipping your rules to be helpful |
+| Prompt | What It Solves | Install |
+|--------|---------------|---------|
+| [Never Skip Instructions](prompts/instruction-following/never-skip-instructions.md) | AI silently skipping your rules to be helpful | [install](install/never-skip-instructions.md) |
 <!-- PROMPT_TABLE_END -->
 
 ## Philosophy
