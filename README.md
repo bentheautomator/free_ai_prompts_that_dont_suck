@@ -4,7 +4,32 @@ System prompts, instructions, and rules for AI coding assistants — Claude Code
 
 No fluff. No "be concise and helpful." These are battle-tested instructions born from thousands of hours of AI-assisted development where something went wrong, someone figured out why, and wrote a rule so it never happens again.
 
-## How to Use These
+## Quick Install (Let Your AI Do It)
+
+Paste this into your AI assistant. It will fetch the instructions and add them to your config:
+
+**Install all prompts at once:**
+```
+Please fetch https://raw.githubusercontent.com/bentheautomator/free_ai_prompts_that_dont_suck/main/install/all.md and append its contents to my project instructions file.
+```
+
+**Install a single prompt:**
+```
+Please fetch https://raw.githubusercontent.com/bentheautomator/free_ai_prompts_that_dont_suck/main/install/never-skip-instructions.md and append its contents to my project instructions file.
+```
+
+Available individual installs:
+- `install/never-skip-instructions.md`
+- `install/ask-before-deleting-code.md`
+- `install/read-before-edit.md`
+- `install/confirm-before-running-destructive-commands.md`
+- `install/all.md` (everything)
+
+Your AI already knows where its own config file lives. It'll put the rules in the right place.
+
+## Manual Install
+
+If you prefer to copy-paste yourself:
 
 **Claude Code:** Copy into your `CLAUDE.md` (project-level) or `~/.claude/CLAUDE.md` (global).
 
@@ -15,6 +40,8 @@ No fluff. No "be concise and helpful." These are battle-tested instructions born
 **Copilot:** Copy into `.github/copilot-instructions.md`.
 
 **Cline / Aider / Others:** Copy into whatever file your AI assistant reads for system instructions.
+
+Each file in `prompts/` has the full explanation. Each file in `install/` has just the instruction block — ready to paste.
 
 **Placement matters.** Put important rules near the top. AI models weight instructions at the beginning of their context more heavily than those buried at the bottom.
 
