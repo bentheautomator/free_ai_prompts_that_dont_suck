@@ -1,16 +1,20 @@
-# Free Claude Prompts That Don't Suck
+# Free AI Prompts That Don't Suck
 
-System prompts, instructions, and rules for Claude Code (and other AI coding assistants) that actually solve real problems.
+System prompts, instructions, and rules for AI coding assistants — Claude Code, Cursor, Windsurf, Copilot, Cline, Aider, and anything else that reads a system prompt — that actually solve real problems.
 
 No fluff. No "be concise and helpful." These are battle-tested instructions born from thousands of hours of AI-assisted development where something went wrong, someone figured out why, and wrote a rule so it never happens again.
 
 ## How to Use These
 
-**Claude Code:** Copy the instruction block into your `CLAUDE.md` (project-level) or `~/.claude/CLAUDE.md` (global).
+**Claude Code:** Copy into your `CLAUDE.md` (project-level) or `~/.claude/CLAUDE.md` (global).
 
 **Cursor:** Copy into `.cursorrules` in your project root.
 
-**Windsurf / Other tools:** Copy into whatever file your AI assistant reads for system instructions.
+**Windsurf:** Copy into `.windsurfrules` in your project root.
+
+**Copilot:** Copy into `.github/copilot-instructions.md`.
+
+**Cline / Aider / Others:** Copy into whatever file your AI assistant reads for system instructions.
 
 **Placement matters.** Put important rules near the top. AI models weight instructions at the beginning of their context more heavily than those buried at the bottom.
 
