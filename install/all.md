@@ -3,23 +3,26 @@
 
 NEVER edit a file you haven't read in this session.
 
+**The core problem:** AI models have strong priors about what code "probably looks like." Given a filename and a task description, they'll generate a convincing edit without ever looking at the real file. The edit applies cleanly about 60% of the time. The other 40% is wasted time, broken code, or subtle bugs from mismatched context. Reading first takes five seconds. Fixing a hallucinated edit takes an hour.
+
 **Before modifying any file, you MUST:**
 1. Read the file (or the relevant section of it)
 2. Understand the existing patterns, naming conventions, and structure
 3. Make changes that are consistent with what's already there
-
-**Why:** AI assistants will generate edits based on assumptions about file contents rather than reading the actual code. This causes failed patches, overwrites working code, and introduces inconsistencies with existing patterns.
 
 **This means:**
 - Read the file before writing to it — every time, no exceptions
 - If the file is large, read at least the section you're modifying plus surrounding context
 - Follow the patterns you see, not the patterns you'd prefer
 - Match existing naming conventions, indentation, and code style — even if they're not what you'd choose
+- If you're changing a function, read the callers too
 
 **Red flags that you're about to violate this:**
 - "Based on the typical structure of this type of file..."
 - "This file probably contains..."
 - "I'll add the standard boilerplate for..."
+- "I know how this framework works, so..."
+- "The function signature is probably..."
 - Generating an edit without a preceding file read
 
 
@@ -28,28 +31,41 @@ NEVER edit a file you haven't read in this session.
 
 NEVER delete, remove, or comment out existing code without explicit approval.
 
+**The core problem:** AI assistants optimize for "clean code" and treat anything without an obvious caller as dead weight. But they're working with incomplete context — they can't see runtime behavior, dynamic dispatch, reflection, cross-repo calls, or your future plans. Deleting "unused" code is choosing your analysis over the developer's intent. That's not your call.
+
 **Before removing anything, you MUST:**
 1. List exactly what you want to remove (file, function, lines)
 2. Explain why you think it should be removed
 3. Wait for explicit "yes" before proceeding
 
-**Why:** AI assistants routinely misjudge code as "dead" or "unused" when it's actually called dynamically, used in tests, kept intentionally, or part of an unreleased feature. Silent deletion causes hard-to-diagnose regressions.
-
-**This applies to:**
+**This applies to everything you didn't write:**
 - Functions, methods, classes, or modules you think are unused
 - Imports that appear unnecessary
 - Commented-out code blocks
 - Configuration entries or environment variables
 - Test files or test cases
 - "Legacy" code that looks outdated
+- Dead-looking feature flags or conditional branches
 
-**The only exception:** Code you just wrote in this session that hasn't been committed. You can freely modify your own work.
+**The only exception:** Code you wrote in this session that hasn't been committed. You can freely modify your own work.
+
+**Red flags that you're about to violate this:**
+- "I'll clean this up while I'm in here..."
+- "This import isn't used anywhere..."
+- "This looks like dead code..."
+- "I'll remove this legacy function..."
+- "This commented-out block should go..."
+- Deleting lines that weren't part of the original task
+
+If you're about to remove something you didn't write and weren't asked to remove — stop. List it. Explain it. Wait.
 
 
 
 ### Confirm Before Running Destructive Commands
 
 NEVER run destructive or irreversible commands without stating what you're about to do and getting explicit approval.
+
+**The core problem:** AI assistants treat shell commands as just another tool. They don't distinguish between `ls` (harmless) and `git push --force origin main` (potentially catastrophic). The "quickest fix" is often the most destructive command, and without a speed bump the AI runs it before you can react.
 
 **Always confirm before:**
 - Deleting files or directories (`rm`, `rm -rf`, `del`)
@@ -63,10 +79,10 @@ NEVER run destructive or irreversible commands without stating what you're about
 
 **How to confirm:**
 1. State the exact command you want to run
-2. Explain what it will do and what it will destroy
+2. Explain what it will do and what it will destroy — be specific ("this will discard your uncommitted changes to auth.ts"), not vague ("this will reset things")
 3. Wait for explicit "yes" or "go ahead"
 
-**Safe alternatives to suggest first:**
+**Suggest safe alternatives first:**
 - `rm` → move to a temp directory instead
 - `git reset --hard` → `git stash` or `git reset --soft`
 - `git push --force` → `git push --force-with-lease`
@@ -77,7 +93,10 @@ NEVER run destructive or irreversible commands without stating what you're about
 - "Let me just clean this up quickly..."
 - "I'll reset this to a clean state..."
 - "The fastest way to fix this is to force-push..."
+- "I'll delete this and recreate it..."
+- "Let me kill that process..."
 - Running a command with `--force`, `--hard`, `-f`, or `rm` without pausing
+- Chaining destructive commands with `&&` to avoid multiple approvals
 
 
 
