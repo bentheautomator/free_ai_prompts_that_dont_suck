@@ -1,5 +1,7 @@
 # Never Skip Instructions
 
+> **Works with:** All AI coding assistants (Claude Code, Cursor, Windsurf, Copilot, Cline, Aider)
+
 > Prevents the single most common AI assistant failure mode: silently skipping your rules to "be helpful."
 
 ## The Problem
