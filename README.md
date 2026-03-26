@@ -1,8 +1,10 @@
 # Free AI Prompts That Don't Suck
 
-System prompts, instructions, and rules for AI coding assistants — Claude Code, Cursor, Windsurf, Copilot, Cline, Aider, and anything else that reads a system prompt — that actually solve real problems.
+You're here because your AI coding assistant keeps ignoring your rules. It skips steps you told it to follow. It deletes code you didn't ask it to touch. It runs destructive commands without asking. It edits files it never bothered to read. And when you call it out, it apologizes and does it again.
 
-No fluff. No "be concise and helpful." These are battle-tested instructions born from thousands of hours of AI-assisted development where something went wrong, someone figured out why, and wrote a rule so it never happens again.
+We know. We've been there. These prompts are the fix.
+
+Every instruction in this repo exists because an AI assistant did something wrong, someone figured out the exact words that prevent it from happening again, and wrote them down so you don't have to. No fluff. No "be concise and helpful." Battle-tested rules for Claude Code, Cursor, Windsurf, Copilot, Cline, Aider, and anything else that reads a system prompt.
 
 ## Quick Install (Let Your AI Do It)
 
