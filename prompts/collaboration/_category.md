@@ -1,3 +1,3 @@
 # Collaboration
 
-Shared-codebase citizenship — stops changes that break the code, tools, and contracts teammates rely on.
+Shared-codebase citizenship — stops changes that break what teammates and other teams rely on.
