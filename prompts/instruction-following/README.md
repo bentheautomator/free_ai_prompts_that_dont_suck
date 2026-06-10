@@ -2,7 +2,9 @@
 
 # Instruction Following Prompts
 
-**1 prompts.** Install the whole category bundle:
+Making the AI obey your rules and processes every time, not just when convenient.
+
+**34 prompts.** Install the whole category bundle:
 
 ```
 Please fetch https://raw.githubusercontent.com/bentheautomator/free_ai_prompts_that_dont_suck/main/install/instruction-following.md and append its contents to my project instructions file.
@@ -11,3 +13,36 @@ Please fetch https://raw.githubusercontent.com/bentheautomator/free_ai_prompts_t
 | Prompt | Severity | What It Solves | Install |
 |--------|----------|----------------|---------|
 | [Never Skip Instructions](never-skip-instructions.md) | critical | AI silently skipping your rules to be helpful | [install](../../install/never-skip-instructions.md) |
+| [No Means No Not Try a Variant](no-means-no-not-try-a-variant.md) | critical | Told no, the AI does a slightly different version of the same thing | [install](../../install/no-means-no-not-try-a-variant.md) |
+| [Wait for the Answer After Asking](wait-for-the-answer-after-asking.md) | critical | AI asks for permission and proceeds without waiting for the answer | [install](../../install/wait-for-the-answer-after-asking.md) |
+| [All Means All Not Just What's Nearby](all-means-all-not-just-whats-nearby.md) | high | Run all tests quietly becomes run the tests I changed | [install](../../install/all-means-all-not-just-whats-nearby.md) |
+| [Always Means Every Time](always-means-every-time.md) | high | Rules that say always being followed most of the time | [install](../../install/always-means-every-time.md) |
+| [Apply Rules in Every File](apply-rules-in-every-file.md) | high | AI obeys a rule in some files and forgets it exists in others | [install](../../install/apply-rules-in-every-file.md) |
+| [Approval Does Not Transfer Between Actions](approval-does-not-transfer-between-actions.md) | high | Yes to one action treated as yes to its bigger cousins | [install](../../install/approval-does-not-transfer-between-actions.md) |
+| [Ask Before Declaring Rule Exceptions](ask-before-declaring-rule-exceptions.md) | high | AI decides your rule doesn't apply here without asking you | [install](../../install/ask-before-declaring-rule-exceptions.md) |
+| [Banned Stays Banned](banned-stays-banned.md) | high | Banned libraries and patterns creeping back in through new code | [install](../../install/banned-stays-banned.md) |
+| [Check Rule Triggers Before Acting](check-rule-triggers-before-acting.md) | high | Conditional rules never fire because AI doesn't notice the trigger | [install](../../install/check-rule-triggers-before-acting.md) |
+| [Corrections Are Rules Not One-Offs](corrections-are-rules-not-one-offs.md) | high | AI fixes what you corrected, then regresses two responses later | [install](../../install/corrections-are-rules-not-one-offs.md) |
+| [Exceptions Are Narrow Not Loopholes](exceptions-are-narrow-not-loopholes.md) | high | The unless clause in your rule stretched until it swallows the rule | [install](../../install/exceptions-are-narrow-not-loopholes.md) |
+| [Finish the Process You Started](finish-the-process-you-started.md) | high | AI abandons your process midway when it gets inconvenient | [install](../../install/finish-the-process-you-started.md) |
+| [Follow Rule Spirit Not Just Letter](follow-rule-spirit-not-just-letter.md) | high | Technically compliant behavior that defeats the rule's whole point | [install](../../install/follow-rule-spirit-not-just-letter.md) |
+| [Keep Rules Alive All Session](keep-rules-alive-all-session.md) | high | Rules followed perfectly for an hour, then quietly forgotten | [install](../../install/keep-rules-alive-all-session.md) |
+| [No Convenient Rule Reinterpretation](no-convenient-rule-reinterpretation.md) | high | AI redefines what your rule means so compliance gets easier | [install](../../install/no-convenient-rule-reinterpretation.md) |
+| [No Just This Once Exceptions](no-just-this-once-exceptions.md) | high | AI grants itself a one-time exemption that becomes a habit | [install](../../install/no-just-this-once-exceptions.md) |
+| [Project Rules Beat Best Practices](project-rules-beat-best-practices.md) | high | AI overrides your project rules with what it considers standard | [install](../../install/project-rules-beat-best-practices.md) |
+| [Promote Chat Instructions to Standing Rules](promote-chat-instructions-to-standing-rules.md) | high | Rules stated in chat treated as scoped to that one message | [install](../../install/promote-chat-instructions-to-standing-rules.md) |
+| [Read the Rules File Before Acting](read-the-rules-file-before-acting.md) | high | AI starts working without ever reading CLAUDE.md or .cursorrules | [install](../../install/read-the-rules-file-before-acting.md) |
+| [Rules Are Requirements Not Preferences](rules-are-requirements-not-preferences.md) | high | AI downgrades your MUST into a nice-to-have it can trade away | [install](../../install/rules-are-requirements-not-preferences.md) |
+| [Small Changes Follow the Same Rules](small-changes-follow-the-same-rules.md) | high | Tiny change used as an excuse to skip the required process | [install](../../install/small-changes-follow-the-same-rules.md) |
+| [Standing Rules Survive New Instructions](standing-rules-survive-new-instructions.md) | high | New instruction arrives, AI forgets every standing rule it had | [install](../../install/standing-rules-survive-new-instructions.md) |
+| [Urgency Does Not Suspend Rules](urgency-does-not-suspend-rules.md) | high | Deadline pressure used as silent authorization to drop constraints | [install](../../install/urgency-does-not-suspend-rules.md) |
+| [Acknowledging a Rule Is Not Following It](acknowledging-a-rule-is-not-following-it.md) | medium | Enthusiastic Got it! followed by zero behavior change | [install](../../install/acknowledging-a-rule-is-not-following-it.md) |
+| [Comply First Disagree Separately](comply-first-disagree-separately.md) | medium | AI half-follows a rule while litigating why the rule is wrong | [install](../../install/comply-first-disagree-separately.md) |
+| [Comply Now Not in Cleanup Later](comply-now-not-in-cleanup-later.md) | medium | Rule compliance deferred to a cleanup pass that never comes | [install](../../install/comply-now-not-in-cleanup-later.md) |
+| [Examples Do Not Limit the Rule](examples-do-not-limit-the-rule.md) | medium | AI applies a rule only to the examples the rule happened to list | [install](../../install/examples-do-not-limit-the-rule.md) |
+| [Fix Every Instance Not Just the Flagged One](fix-every-instance-not-just-the-flagged-one.md) | medium | AI fixes the violation you pointed at and leaves its twins alone | [install](../../install/fix-every-instance-not-just-the-flagged-one.md) |
+| [Keep Required Formats Every Response](keep-required-formats-every-response.md) | medium | Required output format followed twice, then quietly abandoned | [install](../../install/keep-required-formats-every-response.md) |
+| [Mandated Tools Override Habits](mandated-tools-override-habits.md) | medium | Rules file says pnpm, AI keeps typing npm out of habit | [install](../../install/mandated-tools-override-habits.md) |
+| [Never Merge Process Steps](never-merge-process-steps.md) | medium | AI silently combines steps 3 and 4 of your five-step process | [install](../../install/never-merge-process-steps.md) |
+| [Numeric Limits Are Hard Limits](numeric-limits-are-hard-limits.md) | medium | Keep it under 50 lines treated as keep it under 50-ish | [install](../../install/numeric-limits-are-hard-limits.md) |
+| [Preserve Process Step Order](preserve-process-step-order.md) | medium | AI reorders your process steps because its sequence felt better | [install](../../install/preserve-process-step-order.md) |

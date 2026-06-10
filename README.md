@@ -48,6 +48,44 @@ Put important rules near the top. AI models pay more attention to instructions a
 Each category page lists every prompt in it — what it prevents, how severe the failure is, and a one-click install link. Categories are sorted by severity on their own pages, so the rules worth installing preemptively are at the top.
 
 <!-- PROMPT_TABLE_START -->
+
+**1000 prompts across 33 categories.** Each category page lists every prompt with what it solves.
+
+| Category | Prompts | What's In It | Install Bundle |
+|----------|---------|--------------|----------------|
+| [Agents And Automation](prompts/agents-and-automation/README.md) | 30 | Long-running agent failure modes: runaway loops, context decay, stale state, and autonomous overreach. | [install](install/agents-and-automation.md) |
+| [API Design](prompts/api-design/README.md) | 32 | Contracts and compatibility — stops breaking changes to endpoints consumers you can't see depend on. | [install](install/api-design.md) |
+| [Architecture](prompts/architecture/README.md) | 25 | Structural rules that stop the AI from quietly dismantling your module boundaries one diff at a time. | [install](install/architecture.md) |
+| [Backend](prompts/backend/README.md) | 26 | Service implementation failures: queues, jobs, shutdown, scaling, and dev-only happy paths. | [install](install/backend.md) |
+| [CI/CD](prompts/ci-cd/README.md) | 26 | Stops AI assistants from making pipelines green by making them blind, leaky, or lying. | [install](install/ci-cd.md) |
+| [Code Quality](prompts/code-quality/README.md) | 36 | Edit correctness and code craft: hallucinated APIs, pattern violations, dead code, half-done edits. | [install](install/code-quality.md) |
+| [Code Review](prompts/code-review/README.md) | 24 | PR and review behavior: honest replies, intact threads, real fixes, approvals that mean something. | [install](install/code-review.md) |
+| [Code Safety](prompts/code-safety/README.md) | 41 | Stops AI assistants from deleting, overwriting, and destroying things you can't get back. | [install](install/code-safety.md) |
+| [Collaboration](prompts/collaboration/README.md) | 26 | Shared-codebase citizenship — stops changes that break what teammates and other teams rely on. | [install](install/collaboration.md) |
+| [Communication](prompts/communication/README.md) | 35 | Making the AI tell you what actually happened: silent changes, fake confidence, buried bad news. | [install](install/communication.md) |
+| [Concurrency](prompts/concurrency/README.md) | 21 | Races, deadlocks, and async misuse: code that's correct alone and wrong once two things overlap. | [install](install/concurrency.md) |
+| [Configuration](prompts/configuration/README.md) | 25 | Config that fails fast, means one thing everywhere, and never silently runs on the wrong values. | [install](install/configuration.md) |
+| [Context](prompts/context/README.md) | 35 | Keeps AI grounded in your actual repo — no invented paths, history, versions, or environments. | [install](install/context.md) |
+| [Data & ML](prompts/data-and-ml/README.md) | 24 | Data pipelines, notebooks, and ML code: leaks, broken evals, and silently corrupted data. | [install](install/data-and-ml.md) |
+| [Databases](prompts/databases/README.md) | 36 | Migrations, prod data, and SQL safety: stop AI assistants from losing data you can't get back. | [install](install/databases.md) |
+| [Debugging](prompts/debugging/README.md) | 34 | Root-cause discipline: reproduce first, read the error, fix the bug — not the symptom. | [install](install/debugging.md) |
+| [Dependencies](prompts/dependencies/README.md) | 32 | Package management discipline: lockfiles, version pinning, and what you install before it bites. | [install](install/dependencies.md) |
+| [Devops](prompts/devops/README.md) | 29 | Infrastructure and deploys: IaC discipline, Docker hygiene, DNS, rollouts, and rollback plans. | [install](install/devops.md) |
+| [Documentation](prompts/documentation/README.md) | 27 | Docs and comments that tell the truth: no stale guides, lying docstrings, or orphan pages. | [install](install/documentation.md) |
+| [Error Handling](prompts/error-handling/README.md) | 31 | Stops AI from hiding failures: swallowed errors, silent fallbacks, bad retries, lost stack traces. | [install](install/error-handling.md) |
+| [File Handling](prompts/file-handling/README.md) | 25 | File operation hygiene: clean diffs, portable paths, safe writes, and formats left unbroken. | [install](install/file-handling.md) |
+| [Frontend](prompts/frontend/README.md) | 30 | UI failure modes: accessibility regressions, CSS escalation, state abuse, and broken browser behavior. | [install](install/frontend.md) |
+| [Git](prompts/git/README.md) | 40 | Stops AI assistants from wrecking history, nuking work, and committing things that should never ship. | [install](install/git.md) |
+| [Instruction Following](prompts/instruction-following/README.md) | 34 | Making the AI obey your rules and processes every time, not just when convenient. | [install](install/instruction-following.md) |
+| [Language Pitfalls](prompts/language-pitfalls/README.md) | 30 | Language-specific traps AI assistants generate, especially when porting idioms across languages. | [install](install/language-pitfalls.md) |
+| [Legacy Code](prompts/legacy-code/README.md) | 22 | Touching old code without breaking the invisible decisions it encodes. | [install](install/legacy-code.md) |
+| [Performance](prompts/performance/README.md) | 25 | Stops code that wastes CPU, memory, and round trips — and optimization nobody measured or needed. | [install](install/performance.md) |
+| [Planning](prompts/planning/README.md) | 27 | Thinking before coding: sequencing, risk-first ordering, real plans, and knowing when to re-plan. | [install](install/planning.md) |
+| [Refactoring](prompts/refactoring/README.md) | 28 | Behavior-preserving change discipline: small steps, same behavior, nothing silently dropped. | [install](install/refactoring.md) |
+| [Scope](prompts/scope/README.md) | 34 | Doing only what was asked: no feature creep, drive-by edits, gold-plating, or rewrites. | [install](install/scope.md) |
+| [Security](prompts/security/README.md) | 41 | Stops AI assistants from shipping the vulnerability that made the error message go away. | [install](install/security.md) |
+| [Testing](prompts/testing/README.md) | 41 | Stops AI from gaming tests instead of fixing code, and from writing tests that test nothing. | [install](install/testing.md) |
+| [Verification](prompts/verification/README.md) | 28 | Forces AI to prove work is done with evidence — run it, read the output, check the result. | [install](install/verification.md) |
 <!-- PROMPT_TABLE_END -->
 
 ## Why These Work

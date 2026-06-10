@@ -2,7 +2,7 @@
 title: No Commits Unless Asked
 slug: no-commits-unless-asked
 category: git
-tags: [universal, git]
+tags: [universal, git, essential]
 works_with: all
 severity: medium
 one_liner: "Stops the AI from committing when you only asked for changes"

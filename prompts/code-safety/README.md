@@ -2,7 +2,9 @@
 
 # Code Safety Prompts
 
-**2 prompts.** Install the whole category bundle:
+Stops AI assistants from deleting, overwriting, and destroying things you can't get back.
+
+**41 prompts.** Install the whole category bundle:
 
 ```
 Please fetch https://raw.githubusercontent.com/bentheautomator/free_ai_prompts_that_dont_suck/main/install/code-safety.md and append its contents to my project instructions file.
@@ -11,4 +13,43 @@ Please fetch https://raw.githubusercontent.com/bentheautomator/free_ai_prompts_t
 | Prompt | Severity | What It Solves | Install |
 |--------|----------|----------------|---------|
 | [Ask Before Deleting Code](ask-before-deleting-code.md) | critical | AI silently removing code it thinks is unused | [install](../../install/ask-before-deleting-code.md) |
+| [Check Cloud Context Before CLI Commands](check-cloud-context-before-cli-commands.md) | critical | AI trusting whatever account, region, or cluster the CLI was last pointed at | [install](../../install/check-cloud-context-before-cli-commands.md) |
 | [Confirm Before Running Destructive Commands](confirm-before-destructive-commands.md) | critical | AI running rm -rf, force-push, or DB drops without asking | [install](../../install/confirm-before-destructive-commands.md) |
+| [Confirm Irreversible API Calls Before Making Them](confirm-irreversible-api-calls.md) | critical | AI calling delete endpoints on live services while exploring or testing | [install](../../install/confirm-irreversible-api-calls.md) |
+| [Don't Delete Backup Files as Clutter](dont-delete-backup-files-as-clutter.md) | critical | AI tidying away .bak files and old dumps that were the only safety net | [install](../../install/dont-delete-backup-files-as-clutter.md) |
+| [Don't Delete Temp Files That Hold State](dont-delete-temp-files-that-hold-state.md) | critical | AI wiping tmp and cache paths that actually store sessions, queues, or data | [install](../../install/dont-delete-temp-files-that-hold-state.md) |
+| [Don't Escalate to Sudo on Permission Errors](dont-escalate-to-sudo-on-permission-errors.md) | critical | AI slapping sudo on a failing command instead of asking why it failed | [install](../../install/dont-escalate-to-sudo-on-permission-errors.md) |
+| [Double-Check Rsync Direction and Delete Flags](double-check-rsync-direction-and-delete.md) | critical | AI swapping rsync source and destination, or syncing deletions the wrong way | [install](../../install/double-check-rsync-direction-and-delete.md) |
+| [Guard Empty Variables in Destructive Commands](guard-empty-variables-in-destructive-commands.md) | critical | AI writing rm -rf $VAR/ where an unset variable means deleting from root | [install](../../install/guard-empty-variables-in-destructive-commands.md) |
+| [Never Blind-Retry Mutating API Calls](never-blind-retry-mutating-api-calls.md) | critical | AI retrying failed requests that may have succeeded, causing double charges | [install](../../install/never-blind-retry-mutating-api-calls.md) |
+| [Never Convert Data Files in Place](never-convert-data-files-in-place.md) | critical | AI overwriting originals with lossy or failed format conversions | [install](../../install/never-convert-data-files-in-place.md) |
+| [Never Disable Safety Interlocks to Go Faster](never-disable-safety-interlocks.md) | critical | AI turning off confirmations, trash, or backups because they slow it down | [install](../../install/never-disable-safety-interlocks.md) |
+| [Never Hotfix Files on Production Servers](never-hotfix-files-on-production-servers.md) | critical | AI editing or deleting files directly on a live server over SSH | [install](../../install/never-hotfix-files-on-production-servers.md) |
+| [Never Kill Long-Running Jobs for Convenience](never-kill-long-running-jobs.md) | critical | AI killing hours-deep jobs to free a port or tidy up the process list | [install](../../install/never-kill-long-running-jobs.md) |
+| [Never Overwrite Existing Files With Write](never-overwrite-existing-files-with-write.md) | critical | AI replacing a whole file with a partial rewrite, destroying everything else | [install](../../install/never-overwrite-existing-files-with-write.md) |
+| [Never Prune Docker Without Scoping It](never-prune-docker-without-scoping.md) | critical | AI running docker system prune -a --volumes and deleting other projects' data | [install](../../install/never-prune-docker-without-scoping.md) |
+| [Never Purge Queues or Streams to Unstick Them](never-purge-queues-or-streams.md) | critical | AI purging message queues full of unprocessed work to clear a backlog | [install](../../install/never-purge-queues-or-streams.md) |
+| [Never Run Recursive Chmod or Chown Broadly](never-run-recursive-chmod-or-chown-broadly.md) | critical | AI fixing a permission error with chmod -R 777 or chown -R on huge trees | [install](../../install/never-run-recursive-chmod-or-chown-broadly.md) |
+| [Never Skip Dry-Run Flags on Destructive Tools](never-skip-dry-run-flags.md) | critical | AI treating --dry-run as optional and going straight to the real delete | [install](../../install/never-skip-dry-run-flags.md) |
+| [Never Wipe State to Start Fresh](never-wipe-state-to-start-fresh.md) | critical | AI deleting environments and work-in-progress to retry from a clean slate | [install](../../install/never-wipe-state-to-start-fresh.md) |
+| [Order Find Delete Predicates Carefully](order-find-delete-predicates-carefully.md) | critical | AI misordering find -delete or flipping -mtime signs and deleting everything | [install](../../install/order-find-delete-predicates-carefully.md) |
+| [Read Cleanup Scripts Before Running Them](read-cleanup-scripts-before-running-them.md) | critical | AI executing clean.sh or uninstall scripts without knowing what they delete | [install](../../install/read-cleanup-scripts-before-running-them.md) |
+| [Show Count and Sample Before Bulk Mutations](show-count-and-sample-before-bulk-mutations.md) | critical | AI bulk-deleting or bulk-updating records without showing what qualifies | [install](../../install/show-count-and-sample-before-bulk-mutations.md) |
+| [Stay Inside the Project Directory](stay-inside-the-project-directory.md) | critical | AI modifying or deleting files outside the workspace it was asked to work in | [install](../../install/stay-inside-the-project-directory.md) |
+| [Stub External Side Effects in Dev Scripts](stub-external-side-effects-in-dev.md) | critical | AI sending real emails, webhooks, or charges while testing a script | [install](../../install/stub-external-side-effects-in-dev.md) |
+| [Treat Data Directories as Data, Not Artifacts](treat-data-directories-as-data.md) | critical | AI wiping uploads and storage folders as if they were build output | [install](../../install/treat-data-directories-as-data.md) |
+| [Treat Infrastructure Teardown Commands as Nuclear](treat-infra-teardown-as-nuclear.md) | critical | AI running terraform destroy or stack deletes to fix a drift or error | [install](../../install/treat-infra-teardown-as-nuclear.md) |
+| [Verify Copies Before Deleting Originals](verify-copies-before-deleting-originals.md) | critical | AI deleting source files after a copy or move it never verified | [install](../../install/verify-copies-before-deleting-originals.md) |
+| [Verify Glob Expansion Before Deleting](verify-glob-expansion-before-deleting.md) | critical | AI deleting with wildcards that expand to far more than intended | [install](../../install/verify-glob-expansion-before-deleting.md) |
+| [Verify the Target Environment Before Running Anything](verify-target-environment-before-running.md) | critical | AI running commands against production when the user meant staging or local | [install](../../install/verify-target-environment-before-running.md) |
+| [Back Up Unversioned Files Before Editing Them](back-up-unversioned-files-before-editing.md) | high | AI editing files with no version control and no way back | [install](../../install/back-up-unversioned-files-before-editing.md) |
+| [Default New Scripts to Dry-Run](default-new-scripts-to-dry-run.md) | high | AI writing cleanup scripts whose default behavior is to destroy things | [install](../../install/default-new-scripts-to-dry-run.md) |
+| [Never Clear Expensive Caches to Fix Cheap Problems](never-clear-expensive-caches.md) | high | AI nuking caches that take hours to rebuild as a first debugging move | [install](../../install/never-clear-expensive-caches.md) |
+| [Never Force Past Interactive Prompts](never-force-past-interactive-prompts.md) | high | AI adding --yes and -f to silence prompts it never read | [install](../../install/never-force-past-interactive-prompts.md) |
+| [Never Overwrite Local Env Files](never-overwrite-local-env-files.md) | high | AI clobbering a developer's .env with example values during setup | [install](../../install/never-overwrite-local-env-files.md) |
+| [Never Redirect Output Into the Input File](never-redirect-output-into-the-input-file.md) | high | AI truncating a file by writing a command's output back onto its own input | [install](../../install/never-redirect-output-into-the-input-file.md) |
+| [Never Uninstall Global Packages to Fix Conflicts](never-uninstall-global-packages-to-fix-conflicts.md) | high | AI removing or upgrading system-wide tools that other projects depend on | [install](../../install/never-uninstall-global-packages-to-fix-conflicts.md) |
+| [Pilot One Item Before Batch Operations](pilot-one-item-before-batch-operations.md) | high | AI running an untested transform across hundreds of files in one shot | [install](../../install/pilot-one-item-before-batch-operations.md) |
+| [Preview Bulk Find-and-Replace Before Running It](preview-bulk-find-and-replace.md) | high | AI running repo-wide sed or replace-all without checking what it matches | [install](../../install/preview-bulk-find-and-replace.md) |
+| [Use No-Clobber Flags for Mv and Cp](use-no-clobber-flags-for-mv-and-cp.md) | high | AI silently overwriting destination files with mv and cp | [install](../../install/use-no-clobber-flags-for-mv-and-cp.md) |
+| [Extract Archives Into Empty Directories](extract-archives-into-empty-directories.md) | medium | AI unpacking tarballs over existing files or bombing the working directory | [install](../../install/extract-archives-into-empty-directories.md) |

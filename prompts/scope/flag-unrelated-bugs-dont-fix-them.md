@@ -2,7 +2,7 @@
 title: Flag Unrelated Bugs, Don't Fix Them
 slug: flag-unrelated-bugs-dont-fix-them
 category: scope
-tags: [universal, scope, focus]
+tags: [universal, scope, focus, essential]
 works_with: all
 severity: high
 one_liner: "AI silently fixing unrelated bugs it noticed instead of flagging them"

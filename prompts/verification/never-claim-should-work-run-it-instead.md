@@ -2,7 +2,7 @@
 title: Never Claim Should Work, Run It Instead
 slug: never-claim-should-work-run-it-instead
 category: verification
-tags: [universal, verification, claims]
+tags: [universal, verification, claims, essential]
 works_with: all
 severity: high
 one_liner: "Substituting 'this should work' for actually checking whether it works"

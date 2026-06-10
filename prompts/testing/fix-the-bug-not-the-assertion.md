@@ -2,7 +2,7 @@
 title: Fix the Bug, Not the Assertion
 slug: fix-the-bug-not-the-assertion
 category: testing
-tags: [universal, testing, assertions]
+tags: [universal, testing, assertions, essential]
 works_with: all
 severity: critical
 one_liner: "AI editing expected values to match buggy output instead of fixing the bug"
