@@ -5,7 +5,7 @@ category: planning
 tags: [universal, planning]
 works_with: all
 severity: high
-one_liner: "Planning a replacement for code nobody opened, then rediscovering its edge cases"
+one_liner: "Planning a rewrite of code nobody opened, then rediscovering its edge cases"
 ---
 
 # Read the Existing Implementation First
