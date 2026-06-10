@@ -1,4 +1,3 @@
-
 ### Ask Before Deleting Code
 
 NEVER delete, remove, or comment out existing code without explicit approval.

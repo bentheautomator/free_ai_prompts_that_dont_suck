@@ -14,20 +14,10 @@ Every prompt starts with a real problem. Before writing anything:
 
 1. **Name the failure.** One sentence: "AI does X when it should do Y."
 2. **Confirm it's real.** Has this actually happened? To you? To someone you can cite? If it's hypothetical, stop — we don't ship vibes.
-3. **Check for duplicates.** Run `make validate` and scan existing prompts. If the failure mode is already covered, strengthen the existing prompt instead.
-4. **Pick the category.** Which directory does this belong in?
+3. **Check for duplicates.** Scan the category's index (`prompts/<category>/README.md`) and grep for related slugs. With 1000 prompts in the repo, assume your failure mode is covered until proven otherwise — if it is, strengthen the existing prompt instead.
+4. **Pick the category.** There are 33 categories, each with a charter defining what it owns and what it explicitly does not. The full map lives in **[docs/taxonomy.md](taxonomy.md)** — read the charter before placing a prompt; when two categories could claim it, the exclusion rules break the tie.
 
-| Category | Failure Domain |
-|----------|---------------|
-| `code-safety` | Data loss, destructive actions, unauthorized changes |
-| `code-quality` | Bad edits, pattern violations, hallucinated code |
-| `instruction-following` | Skipping rules, ignoring processes |
-| `git` | Unsafe git operations, bad commits |
-| `communication` | Acting without telling you, silent changes |
-| `context` | Hallucinated assumptions, unverified claims |
-| `scope` | Over-engineering, feature creep, going off-task |
-
-If none fit, create a new category directory. The build script discovers it automatically.
+If none fit, create a new category directory with a `_category.md` (H1 heading plus a one-line description used in the README tables) and add its charter to `docs/taxonomy.md`. The build script discovers the directory automatically.
 
 ## Phase 2: Write the Prompt File
 
@@ -87,9 +77,9 @@ one_liner: "What it prevents in <80 chars"
 ### Quality checklist (before moving to Phase 3)
 
 - [ ] Frontmatter complete, all 7 fields present
-- [ ] `slug` matches filename
+- [ ] `slug` matches filename and is unique across ALL categories (install files are keyed by slug alone — the build fails on collisions)
 - [ ] `category` matches directory
-- [ ] `one_liner` under 80 characters
+- [ ] `one_liner` under 80 characters, no `|` characters (it goes into markdown tables)
 - [ ] Instruction block is between two `---` markers
 - [ ] Instruction block is fully standalone (no "as mentioned above")
 - [ ] Install link present: `**[Copy-paste ready version](../../install/<slug>.md)**` after description blockquote
@@ -122,7 +112,8 @@ After `make build`, spot-check:
 1. **Individual install file exists:** `install/<slug>.md`
 2. **Category bundle includes your prompt:** `install/<category>.md`
 3. **Essentials bundle** (if tagged `essential`): `install/essentials.md`
-4. **README table** has your prompt in the right category section
+4. **Category index** (`prompts/<category>/README.md`) lists your prompt
+5. **Main README table** shows the updated count for your category
 
 ## Phase 4: Commit
 

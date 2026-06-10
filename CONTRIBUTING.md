@@ -4,19 +4,9 @@
 
 ### 1. Pick a category
 
-Put your prompt in the right `prompts/<category>/` directory:
+Put your prompt in the right `prompts/<category>/` directory. There are 33 categories, each with a charter defining what it owns and what it explicitly doesn't — see **[docs/taxonomy.md](docs/taxonomy.md)** for the full map. When two categories could claim your prompt, the charter's exclusion rules break the tie.
 
-| Category | What Goes Here |
-|----------|---------------|
-| `code-safety` | Preventing data loss, destructive actions, unauthorized deletion |
-| `code-quality` | Correct edits, following patterns, reading before writing |
-| `instruction-following` | Making AI follow user-defined rules and processes |
-| `git` | Safe git operations, commit messages, branch protection |
-| `communication` | AI tells you what it's doing, asks before acting |
-| `context` | Preventing hallucinated assumptions, verifying before acting |
-| `scope` | Keeping changes focused, preventing over-engineering |
-
-Need a new category? Just create the directory. The build script discovers categories automatically.
+Need a new category? Just create the directory with a `_category.md` (an H1 plus a one-line description used in the README tables). The build script discovers categories automatically. But read the taxonomy first — "none of these fit" is usually wrong.
 
 ### 2. Use the template
 
@@ -76,7 +66,7 @@ The more specific, the more credible.
 | Field | Required | Notes |
 |-------|----------|-------|
 | `title` | Yes | Human-readable name |
-| `slug` | Yes | Must match filename (without .md) |
+| `slug` | Yes | Must match filename (without .md); must be unique across ALL categories — install files are keyed by slug alone |
 | `category` | Yes | Must match parent directory name |
 | `tags` | Yes | Array. Add `essential` for starter pack inclusion |
 | `works_with` | Yes | `all` or list like `[claude-code, cursor]` |
