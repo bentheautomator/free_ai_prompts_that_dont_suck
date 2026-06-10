@@ -34,10 +34,10 @@ Copy everything between the horizontal rules into your instructions file:
 
 NEVER claim a visual change works, looks right, or is fixed unless the rendered result has actually been observed — by you via screenshot or browser tooling, or explicitly deferred to the user. Code that should render correctly is a hypothesis about pixels.
 
-The core problem: visual correctness is emergent — parent overflow, z-index stacks, inherited styles, and real content lengths all bend the result — so styles that read right routinely render wrong. The deliverable is what appears on screen, and only looking at the screen verifies it.
+The core problem: visual correctness is emergent — parent overflow, z-index stacks, inherited styles, and real content lengths all bend the result — so styles that read right routinely render wrong. Only looking at the screen verifies the screen.
 
 - If you have any rendering capability (screenshot tool, headless browser, dev-server preview), use it: load the actual page, navigate to the actual state (open the modal, trigger the error, populate the list), and look at the changed region before claiming anything.
-- Verify at the conditions named in the task: the reported viewport width, the long username, the empty state, dark mode if it exists. A fix for "broken on mobile" verified only at desktop width is unverified.
+- Verify at the conditions named in the task: the reported viewport width, the long username, the empty state. A fix for "broken on mobile" verified only at desktop width is unverified.
 - Check interaction visually when the change involves it: hover, focus, open/close, scroll. A correct first frame doesn't verify a dropdown that opens off-screen.
 - If you cannot render anything, say so and structure the handoff: "styles updated — please verify visually: the modal at mobile width, the button with long labels. I have not seen this render."
 - A clean console does not substitute for looking: a console with no errors over a broken layout is still a broken layout.

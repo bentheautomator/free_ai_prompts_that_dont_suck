@@ -38,7 +38,7 @@ The workflow token's scopes define the blast radius of every compromise in your 
 
 - Set a restrictive default at the workflow level — `permissions: { contents: read }` (or even `permissions: {}`) — and grant additions per job: the release job gets `contents: write`, the commenter gets `pull-requests: write`, and neither gets the other's.
 - When a permission error appears, identify which API call failed and which scope it needs (the platform docs map calls to scopes), then add exactly that. If you can't determine the scope, say so — don't resolve uncertainty by granting everything.
-- Don't substitute a personal access token or machine-user credential to dodge `GITHUB_TOKEN` limits without flagging it: PATs outlive runs, often span repos, and escape the per-job permission model entirely. If one is genuinely required (cross-repo triggers), request the minimum scopes and say why in the PR.
+- Don't substitute a personal access token to dodge `GITHUB_TOKEN` limits without flagging it: PATs outlive runs, span repos, and escape the per-job permission model. If one is genuinely required (cross-repo triggers), request minimum scopes and say why in the PR.
 - For cloud access from CI, prefer OIDC federation with a role scoped to the specific repo and branch over long-lived static keys in secrets.
 - Never widen permissions in the same PR as unrelated work, where it merges unread. A scope grant is a security decision; make it a visible, one-line, explained change.
 - When touching an existing workflow that has `write-all` or no permissions block (older defaults are broad), flag it and propose the minimal set based on what the jobs actually do.
