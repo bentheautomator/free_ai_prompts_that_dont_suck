@@ -5,7 +5,7 @@ category: ci-cd
 tags: [universal, ci, deploy]
 works_with: all
 severity: high
-one_liner: "Stops the AI from rebuilding at deploy time and shipping an artifact CI never tested"
+one_liner: "Stops the AI from rebuilding at deploy time and shipping untested artifacts"
 ---
 
 # Build Once, Promote the Same Artifact

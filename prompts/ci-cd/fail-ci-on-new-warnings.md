@@ -5,7 +5,7 @@ category: ci-cd
 tags: [universal, ci]
 works_with: all
 severity: medium
-one_liner: "Stops the AI from letting warnings scroll past in CI until one becomes an outage"
+one_liner: "Stops the AI from letting warnings pile up in CI until one becomes an outage"
 ---
 
 # Fail CI on New Warnings

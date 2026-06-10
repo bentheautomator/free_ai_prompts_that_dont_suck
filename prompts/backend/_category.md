@@ -1,3 +1,3 @@
 # Backend
 
-Service implementation failures: queues, jobs, shutdown, scaling, and the lies dev environments tell.
+Service implementation failures: queues, jobs, shutdown, scaling, and dev-only happy paths.

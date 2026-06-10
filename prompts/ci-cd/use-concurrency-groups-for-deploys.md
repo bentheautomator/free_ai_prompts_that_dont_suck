@@ -5,7 +5,7 @@ category: ci-cd
 tags: [universal, ci, deploy]
 works_with: all
 severity: high
-one_liner: "Stops the AI from writing deploy jobs that can run twice at once or out of order"
+one_liner: "Stops the AI from writing deploy jobs that race each other or finish out of order"
 ---
 
 # Use Concurrency Groups for Deploys
