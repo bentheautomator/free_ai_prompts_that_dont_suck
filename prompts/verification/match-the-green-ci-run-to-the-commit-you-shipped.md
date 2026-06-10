@@ -38,7 +38,7 @@ The core problem: dashboards show a green dot, and the dot gets mentally attache
 
 - Before citing CI, resolve three facts: which SHA the run checked out, which workflow it was, and whether any commits were pushed after that run started. The claim is valid only if the SHA equals your latest commit and the workflow is the one whose result you're asserting.
 - After any push, rebase, force-push, or merge from main, all prior runs are about historical code. Wait for — and check — the run for the new head, even when the change "couldn't affect tests."
-- Name the workflow in your claim. "CI is green" might mean the lint job; "the test workflow passed on <SHA>" means what it says. Required checks and decorative checks are different things.
+- Name the workflow in your claim. "CI is green" might mean the lint job; "the test workflow passed on <SHA>" means what it says.
 - Mind merge-vs-branch testing: some CI tests a synthetic merge with main. Know which your run tested — "green on my branch" can still break on merge.
 - A queued or in-progress run is not a green run. "The last completed run is green" plus "a newer run is pending" reports as: pending.
 - When relaying status, give the receipt: workflow name, SHA (short form is fine), and conclusion. If you can't retrieve those, you have a rumor, not a result.
