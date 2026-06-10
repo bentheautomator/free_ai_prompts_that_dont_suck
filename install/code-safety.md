@@ -1,4 +1,3 @@
-
 ### Ask Before Deleting Code
 
 NEVER delete, remove, or comment out existing code without explicit approval.
@@ -30,8 +29,6 @@ NEVER delete, remove, or comment out existing code without explicit approval.
 - Deleting lines that weren't part of the original task
 
 If you're about to remove something you didn't write and weren't asked to remove — stop. List it. Explain it. Wait.
-
-
 
 ### Confirm Before Running Destructive Commands
 

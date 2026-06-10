@@ -50,26 +50,13 @@ Put important rules near the top. AI models pay more attention to instructions a
 
 <!-- PROMPT_TABLE_START -->
 
-### Code Quality
+**4 prompts across 3 categories.** Each category page lists every prompt with what it solves.
 
-| Prompt | What It Solves | Install |
-|--------|---------------|---------|
-| [Read Before Edit](prompts/code-quality/read-before-edit.md) | AI making blind edits based on assumptions instead of reading the file | [install](install/read-before-edit.md) |
-
-
-### Code Safety
-
-| Prompt | What It Solves | Install |
-|--------|---------------|---------|
-| [Ask Before Deleting Code](prompts/code-safety/ask-before-deleting-code.md) | AI silently removing code it thinks is unused | [install](install/ask-before-deleting-code.md) |
-| [Confirm Before Running Destructive Commands](prompts/code-safety/confirm-before-destructive-commands.md) | AI running rm -rf, force-push, or DB drops without asking | [install](install/confirm-before-destructive-commands.md) |
-
-
-### Instruction Following
-
-| Prompt | What It Solves | Install |
-|--------|---------------|---------|
-| [Never Skip Instructions](prompts/instruction-following/never-skip-instructions.md) | AI silently skipping your rules to be helpful | [install](install/never-skip-instructions.md) |
+| Category | Prompts | What's In It | Install Bundle |
+|----------|---------|--------------|----------------|
+| [Code Quality](prompts/code-quality/README.md) | 1 | — | [install](install/code-quality.md) |
+| [Code Safety](prompts/code-safety/README.md) | 2 | — | [install](install/code-safety.md) |
+| [Instruction Following](prompts/instruction-following/README.md) | 1 | — | [install](install/instruction-following.md) |
 <!-- PROMPT_TABLE_END -->
 
 ## Why These Work

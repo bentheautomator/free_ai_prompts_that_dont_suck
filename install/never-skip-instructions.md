@@ -1,4 +1,3 @@
-
 ### Never Skip Instructions
 
 NEVER skip user instructions, required processes, or defined workflows — even when trying to move fast.

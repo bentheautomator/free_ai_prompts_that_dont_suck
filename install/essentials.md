@@ -1,4 +1,3 @@
-
 ### Read Before Edit
 
 NEVER edit a file you haven't read in this session.
@@ -24,8 +23,6 @@ NEVER edit a file you haven't read in this session.
 - "I know how this framework works, so..."
 - "The function signature is probably..."
 - Generating an edit without a preceding file read
-
-
 
 ### Ask Before Deleting Code
 
@@ -58,8 +55,6 @@ NEVER delete, remove, or comment out existing code without explicit approval.
 - Deleting lines that weren't part of the original task
 
 If you're about to remove something you didn't write and weren't asked to remove — stop. List it. Explain it. Wait.
-
-
 
 ### Confirm Before Running Destructive Commands
 
@@ -97,8 +92,6 @@ NEVER run destructive or irreversible commands without stating what you're about
 - "Let me kill that process..."
 - Running a command with `--force`, `--hard`, `-f`, or `rm` without pausing
 - Chaining destructive commands with `&&` to avoid multiple approvals
-
-
 
 ### Never Skip Instructions
 
