@@ -5,7 +5,7 @@ category: verification
 tags: [universal, verification, refactoring]
 works_with: all
 severity: high
-one_liner: "Declaring a rename or removal complete without searching for surviving references"
+one_liner: "Declaring a rename or removal done without searching for surviving references"
 ---
 
 # Grep for Leftovers Before Calling the Rename Done

@@ -5,7 +5,7 @@ category: verification
 tags: [universal, verification, deployment]
 works_with: all
 severity: critical
-one_liner: "Calling a deploy done because the pipeline went green, not because the new code is serving"
+one_liner: "Calling a deploy live because the pipeline is green, not because it's serving"
 ---
 
 # Confirm the New Version Is Actually Live
