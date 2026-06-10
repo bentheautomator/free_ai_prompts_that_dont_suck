@@ -5,7 +5,7 @@ category: code-review
 tags: [universal, review, feedback]
 works_with: all
 severity: high
-one_liner: "Stops silently skipping requested changes the assistant privately disagrees with"
+one_liner: "Stops silently skipping requested changes the assistant disagrees with"
 ---
 
 # Discuss Requested Changes You Disagree With

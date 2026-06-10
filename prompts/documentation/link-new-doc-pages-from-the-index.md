@@ -5,7 +5,7 @@ category: documentation
 tags: [universal, docs]
 works_with: all
 severity: medium
-one_liner: "New doc pages created but never linked, invisible to every reader who needs them"
+one_liner: "New doc pages created but never linked, invisible to every reader"
 ---
 
 # Link New Doc Pages From the Index

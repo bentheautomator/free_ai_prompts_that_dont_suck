@@ -5,7 +5,7 @@ category: documentation
 tags: [universal, docs]
 works_with: all
 severity: medium
-one_liner: "AI rewriting an entire doc when asked to fix one sentence, losing curated content"
+one_liner: "Rewriting a whole doc to fix one sentence, losing curated content"
 ---
 
 # Make Surgical Doc Edits, Not Rewrites

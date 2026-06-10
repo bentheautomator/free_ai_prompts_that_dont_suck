@@ -5,7 +5,7 @@ category: documentation
 tags: [universal, docs]
 works_with: all
 severity: medium
-one_liner: "Empty Contributing/License/FAQ sections added because READMEs 'should' have them"
+one_liner: "Empty Contributing/License/FAQ sections added because templates have them"
 ---
 
 # Don't Pad Docs With Boilerplate Sections

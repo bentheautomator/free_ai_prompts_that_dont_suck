@@ -5,7 +5,7 @@ category: documentation
 tags: [universal, docs]
 works_with: all
 severity: medium
-one_liner: "Docs full of 'currently', 'new', and 'coming soon' that rot the moment they land"
+one_liner: "Docs full of 'currently' and 'coming soon' that rot the moment they land"
 ---
 
 # Avoid Temporal Language in Docs

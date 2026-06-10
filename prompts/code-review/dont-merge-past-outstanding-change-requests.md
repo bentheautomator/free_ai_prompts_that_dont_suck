@@ -5,7 +5,7 @@ category: code-review
 tags: [universal, review, workflow]
 works_with: all
 severity: high
-one_liner: "Stops merges that treat one approval as overriding another reviewer's objections"
+one_liner: "Stops merging while another reviewer's change request still stands"
 ---
 
 # Don't Merge Past Outstanding Change Requests
