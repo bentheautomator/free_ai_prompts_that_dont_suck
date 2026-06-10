@@ -34,7 +34,7 @@ Copy everything between the horizontal rules into your instructions file:
 
 Every background job MUST have a maximum runtime, enforced from outside the job's own code, and long-running jobs MUST emit progress heartbeats. A job with no deadline that hangs is invisible: it throws nothing, retries never, and holds its worker slot forever.
 
-- Set an explicit per-job-type timeout in the worker framework (Sidekiq/Celery `time_limit`, BullMQ job timeouts, a context deadline wrapping the handler in Go). Enforcement must come from outside the job — a wedged job cannot check its own watch.
+- Set an explicit per-job-type timeout in the worker framework (Celery `time_limit`, BullMQ timeouts, a context deadline wrapping the handler in Go) — enforced outside the job, because a wedged job cannot check its own watch.
 - Size the deadline from observed runtime (e.g., p99 × 3), not a universal "1 hour to be safe." A deadline that never fires is a deadline you don't have.
 - On expiry, kill the job and route it through your normal failure path — retry if transient, dead-letter after max attempts — so "hung" degrades into the failure mode you already handle, instead of a fourth state nobody handles.
 - Long jobs should heartbeat: update a `last_progress_at` timestamp or extend a claim lease as batches complete. A sweeper that flags jobs whose heartbeat is stale catches hangs in minutes; a deadline alone catches them at the deadline.

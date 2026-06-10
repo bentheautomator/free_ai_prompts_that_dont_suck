@@ -38,9 +38,9 @@ The core problem: visual correctness is emergent — parent overflow, z-index st
 
 - If you have any rendering capability (screenshot tool, headless browser, dev-server preview), use it: load the actual page, navigate to the actual state (open the modal, trigger the error, populate the list), and look at the changed region before claiming anything.
 - Verify at the conditions named in the task: the reported viewport width, the long username, the empty state, dark mode if it exists. A fix for "broken on mobile" verified only at desktop width is unverified.
-- Check interaction visually when the change involves it: hover, focus, open/close, scroll. A rendered first frame doesn't verify a dropdown that opens off-screen.
-- If you cannot render anything, say so and structure the handoff: "styles updated — please verify visually: the modal at mobile width, the button with long labels. I have not seen this render." Never let "the code is correct" stand where "it looks right" was the question.
-- Pair the look with the console check, but don't substitute it: a clean console with a broken layout is still a broken layout.
+- Check interaction visually when the change involves it: hover, focus, open/close, scroll. A correct first frame doesn't verify a dropdown that opens off-screen.
+- If you cannot render anything, say so and structure the handoff: "styles updated — please verify visually: the modal at mobile width, the button with long labels. I have not seen this render."
+- A clean console does not substitute for looking: a console with no errors over a broken layout is still a broken layout.
 - Describe what you observed, not what the code intends: "screenshot shows the button fully visible at 375px" beats "the button should no longer be cut off."
 
 **Red flags that you're about to violate this:**
