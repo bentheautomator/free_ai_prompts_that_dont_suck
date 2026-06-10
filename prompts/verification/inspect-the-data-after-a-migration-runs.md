@@ -5,7 +5,7 @@ category: verification
 tags: [universal, verification, data]
 works_with: all
 severity: critical
-one_liner: "Calling a migration or data script successful without looking at the data it made"
+one_liner: "Calling a migration successful without looking at the data it actually made"
 ---
 
 # Inspect the Data After a Migration Runs
