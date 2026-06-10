@@ -5,7 +5,7 @@ category: backend
 tags: [universal, backend, scaling]
 works_with: all
 severity: high
-one_liner: "Stops in-memory sessions and caches from breaking the moment you run two replicas"
+one_liner: "In-memory sessions and caches breaking the moment you run two replicas"
 ---
 
 # Keep Session State Out of Process Memory

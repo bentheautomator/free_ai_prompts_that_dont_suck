@@ -5,7 +5,7 @@ category: data-and-ml
 tags: [universal, data, pandas]
 works_with: all
 severity: high
-one_liner: "In-place edits to a DataFrame other code reads make results depend on call order"
+one_liner: "In-place edits to a shared DataFrame make results depend on call order"
 ---
 
 # Don't Mutate Shared DataFrames in Place

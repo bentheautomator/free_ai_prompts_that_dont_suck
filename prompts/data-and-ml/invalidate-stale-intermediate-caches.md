@@ -5,7 +5,7 @@ category: data-and-ml
 tags: [universal, data]
 works_with: all
 severity: medium
-one_liner: "A cached features.parquet that ignores upstream changes serves yesterday's data forever"
+one_liner: "A cache that ignores upstream changes serves yesterday's data forever"
 ---
 
 # Invalidate Stale Intermediate Caches

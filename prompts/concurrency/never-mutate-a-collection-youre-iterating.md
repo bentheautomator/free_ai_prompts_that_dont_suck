@@ -5,7 +5,7 @@ category: concurrency
 tags: [universal, concurrency, state]
 works_with: all
 severity: high
-one_liner: "Stops concurrent mutation of collections mid-iteration from corrupting traversals"
+one_liner: "Stops mid-iteration mutation of collections from corrupting traversals"
 ---
 
 # Never Mutate a Collection You're Iterating

@@ -5,7 +5,7 @@ category: data-and-ml
 tags: [universal, data, pandas]
 works_with: all
 severity: high
-one_liner: "Casual casts truncate floats, mangle datetimes, and strip leading zeros silently"
+one_liner: "Casual casts silently truncate floats, mangle datetimes, and corrupt IDs"
 ---
 
 # Guard Lossy Type Conversions

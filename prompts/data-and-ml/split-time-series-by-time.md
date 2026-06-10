@@ -5,7 +5,7 @@ category: data-and-ml
 tags: [universal, ml, evaluation]
 works_with: all
 severity: critical
-one_liner: "Random shuffles on temporal data let the model train on the future it's graded on"
+one_liner: "Random splits on temporal data train the model on its own test future"
 ---
 
 # Split Time Series by Time

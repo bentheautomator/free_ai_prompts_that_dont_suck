@@ -5,7 +5,7 @@ category: configuration
 tags: [universal, config, defaults]
 works_with: all
 severity: critical
-one_liner: "Stops laptop-scale defaults — no limits, tiny pools — from reaching prod traffic"
+one_liner: "Stops laptop-scale defaults like unbounded queues from reaching prod traffic"
 ---
 
 # Size Defaults for Production, Not the Demo

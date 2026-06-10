@@ -5,7 +5,7 @@ category: data-and-ml
 tags: [universal, data, pandas]
 works_with: all
 severity: high
-one_liner: "Aggregations skip NaNs silently, so your mean describes only the rows that answered"
+one_liner: "Aggregations skip NaNs silently, so your mean covers only rows that answered"
 ---
 
 # Audit NaNs Before Aggregating
